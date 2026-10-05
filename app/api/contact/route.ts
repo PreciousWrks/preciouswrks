@@ -24,9 +24,15 @@ export async function POST(request: Request) {
     // temporary notification outage cannot make a saved enquiry look lost.
     let alertSent = false;
     try {
+      const siteOrigin = new URL(request.url).origin;
       const notification = await fetch("https://formsubmit.co/ajax/afolabiprecious233@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Origin: siteOrigin,
+          Referer: `${siteOrigin}/`,
+        },
         body: JSON.stringify({ name, email, "Language pair": languagePair, Deadline: deadline, message, _subject: `New project enquiry from ${name}`, _captcha: "false" }),
         signal: AbortSignal.timeout(5000),
       });
