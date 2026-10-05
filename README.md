@@ -13,6 +13,14 @@ pnpm dev
 
 The site uses a D1 database named `DB` for enquiries. Apply `drizzle/0000_typical_morlocks.sql` to the local D1 database before testing the form. `pnpm build` produces the Worker in `dist/server` and public assets in `dist/client`.
 
+## Deploy to Vercel
+
+Import `PreciousWrks/preciouswrks` into Vercel with the repository root as the project root. The committed `vercel.json` selects the Next.js framework and runs `pnpm run build:vercel`, which creates the `.next` output Vercel needs. Use the default output directory; do not set it to `dist` or `public`. Vercel should redeploy automatically when a connected repository receives a push to `main`.
+
+The Vercel contact endpoint sends enquiries through the activated FormSubmit address. It confirms a submission only after FormSubmit reports success. Since Vercel has no Cloudflare D1 binding, enquiries there arrive by email and the `/inbox` page explains that delivery method. The Sites deployment continues to save enquiries to D1 and uses its private owner inbox.
+
+To check the Vercel build locally, run `VERCEL=1 pnpm run build:vercel` and confirm `.next/routes-manifest.json` exists. In Vercel project settings, leave the framework as Next.js, the root directory as the repository root, and remove any prior output directory override. If Vercel retains an old build setting, clear it so the repository's `vercel.json` takes effect.
+
 ## Deploy from GitHub
 
 Every push to `main` builds the site through `.github/workflows/deploy.yml`. To deploy a copy to your own Cloudflare account, create a D1 database and set these repository secrets:
@@ -41,5 +49,6 @@ The public contact form saves to D1, then makes a best effort FormSubmit email a
 - `build/`, `scripts/`, `vite.config.ts`: Vinext and Sites build support
 - `.openai/hosting.json`: logical Sites database binding and existing project ID
 - `.github/workflows/deploy.yml`: GitHub build and optional Cloudflare deployment
+- `vercel.json`, `next.config.ts`, `lib/vercel-worker-env.ts`: Vercel build and Cloudflare binding compatibility
 
 Company marks on the public page are retrieved as site icons from Google’s favicon service and link to each company’s website. No client project files or correspondence are included in this repository.

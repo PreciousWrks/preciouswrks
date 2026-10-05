@@ -16,12 +16,15 @@ export async function POST(request: Request) {
     if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !languagePair || !message) {
       return Response.json({ success: false, error: "Complete the required fields." }, { status: 400 });
     }
-    if (!env.DB) return Response.json({ success: false }, { status: 503 });
-    const recent = await env.DB.prepare("SELECT count(*) AS total FROM enquiries WHERE email = ? AND created_at > datetime('now', '-1 hour')").bind(email).first<{ total: number }>();
-    if ((recent?.total || 0) >= 3) return Response.json({ success: false, error: "Try again later." }, { status: 429 });
-    await env.DB.prepare("INSERT INTO enquiries (name, email, language_pair, deadline, message) VALUES (?, ?, ?, ?, ?)").bind(name, email, languagePair, deadline, message).run();
-    // The inbox is the durable record. An email alert is best effort, so a
-    // temporary notification outage cannot make a saved enquiry look lost.
+    const onVercel = process.env.VERCEL === "1";
+    if (!onVercel) {
+      if (!env.DB) return Response.json({ success: false }, { status: 503 });
+      const recent = await env.DB.prepare("SELECT count(*) AS total FROM enquiries WHERE email = ? AND created_at > datetime('now', '-1 hour')").bind(email).first<{ total: number }>();
+      if ((recent?.total || 0) >= 3) return Response.json({ success: false, error: "Try again later." }, { status: 429 });
+      await env.DB.prepare("INSERT INTO enquiries (name, email, language_pair, deadline, message) VALUES (?, ?, ?, ?, ?)").bind(name, email, languagePair, deadline, message).run();
+    }
+    // Sites keeps the private database record if an email alert is delayed.
+    // Vercel has no D1 binding, so delivery must succeed before acknowledging.
     let alertSent = false;
     try {
       const siteOrigin = new URL(request.url).origin;
@@ -38,9 +41,10 @@ export async function POST(request: Request) {
       });
       const notificationResult = await notification.json() as { success?: string | boolean };
       alertSent = notification.ok && (notificationResult.success === true || notificationResult.success === "true");
-    } catch { /* The enquiry remains in the private inbox. */ }
+    } catch { /* Sites retains the record; Vercel reports a delivery error below. */ }
+    if (onVercel && !alertSent) return Response.json({ success: false, error: "The enquiry could not be sent." }, { status: 503 });
     return Response.json({ success: true, alertSent }, { status: 201, headers: { "Cache-Control": "no-store" } });
   } catch {
-    return Response.json({ success: false, error: "The enquiry could not be saved." }, { status: 503 });
+    return Response.json({ success: false, error: "The enquiry could not be sent. Please email me directly." }, { status: 503 });
   }
 }

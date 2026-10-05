@@ -25,6 +25,8 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      - name: Verify Vercel build
+        run: VERCEL=1 pnpm run build:vercel
       - name: Configure Cloudflare deployment
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' && env.CLOUDFLARE_D1_DATABASE_ID != ''
         run: |

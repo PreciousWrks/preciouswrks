@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 type Enquiry = { id: number; name: string; email: string; language_pair: string; deadline: string; message: string; created_at: string };
 
 export default async function Inbox() {
+  if (process.env.VERCEL === "1") return <main className="inbox shell"><Link className="inbox-back" href="/">← Back to site</Link><h1>Project enquiries</h1><p>Enquiries from this site are delivered directly to Precious by email.</p></main>;
   const user = await getChatGPTUser();
   if (!user) return <main className="inbox shell"><Link className="inbox-back" href="/">← Back to site</Link><h1>Project inbox</h1><p>Sign in as the site owner to view enquiries.</p><a className="button-dark" href={chatGPTSignInPath("/inbox")}>Sign in <span>↗</span></a></main>;
   if (user.email.toLowerCase() !== "afolabiprecious233@gmail.com") return <main className="inbox shell"><h1>Access unavailable</h1><Link href="/">Back to site</Link></main>;
