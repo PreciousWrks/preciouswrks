@@ -1,6 +1,6 @@
 # Precious Afolabi — Nordic localization
 
-Source for [Precious Afolabi’s website](https://precious-language-practice.afolabiprecious233.chatgpt.site). Built with Next.js and Vinext for Cloudflare Workers. The public page is in `app/page.tsx`; the contact endpoint and owner inbox are in `app/api/contact` and `app/inbox`.
+Source for [Precious Afolabi’s website](https://www.preciouswrks.com/). Built with Next.js and Vinext for Cloudflare Workers. The public page is in `app/page.tsx`; the contact endpoint and owner inbox are in `app/api/contact` and `app/inbox`.
 
 ## Run locally
 
@@ -14,6 +14,8 @@ pnpm dev
 The site uses a D1 database named `DB` for enquiries. Apply `drizzle/0000_typical_morlocks.sql` to the local D1 database before testing the form. `pnpm build` produces the Worker in `dist/server` and public assets in `dist/client`.
 
 ## Deploy to Vercel
+
+Production website: [https://www.preciouswrks.com/](https://www.preciouswrks.com/)
 
 Import `PreciousWrks/preciouswrks` into Vercel with the repository root as the project root. The committed `vercel.json` selects the Next.js framework and runs `pnpm run build:vercel`, which creates the `.next` output Vercel needs. Use the default output directory; do not set it to `dist` or `public`. Vercel should redeploy automatically when a connected repository receives a push to `main`.
 
