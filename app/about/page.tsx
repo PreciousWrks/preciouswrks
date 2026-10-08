@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import LuxuryFooter from "@/app/luxury-footer";
+export const metadata: Metadata = {
+  title: "About Precious Afolabi | Nordic Translator & Localization Specialist",
+  description: "Meet Precious Afolabi, a London-based Norwegian and Danish localization specialist with 9+ years of experience. Translation, revision, MTPE and linguistic QA across English, Norwegian and Danish.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About Precious Afolabi | Nordic Localization", description: "A closer look at the language expertise, judgement and working approach behind PreciousWrks.", url: "https://www.preciouswrks.com/about", type: "profile" },
+};
+const strengths = [
+  {number:"01",title:"Meaning before mechanics",detail:"The task is never simply to replace words. I look at who will read the text, what they need to do with it and what cannot afford to be misunderstood."},
+  {number:"02",title:"Judgement in the details",detail:"A misplaced term, an ambiguous instruction or a broken placeholder can change the outcome. I treat those details as central to the work."},
+  {number:"03",title:"A direct working relationship",detail:"You brief the person doing the work. I ask focused questions, follow your instructions and remain accountable through delivery."}
+];
+const languages = ["English ↔ Norwegian","English ↔ Danish","Norwegian ↔ Danish"];
+export default function AboutPage(){
+ return <><a className="skip-link" href="#main">Skip to content</a>
+  <div className="about-editorial-top"><header className="site-header shell about-editorial-header"><Link className="brand" href="/">Precious Afolabi<span>.</span></Link><nav aria-label="Page navigation"><Link href="/">Home</Link><Link href="/#expertise">Services</Link><Link href="/#work">Selected work</Link><Link className="header-contact" href="/#contact">Discuss a project ↗</Link></nav></header>
+  <main id="main">
+   <section className="about-editorial-hero shell" aria-labelledby="about-page-heading">
+    <div className="about-editorial-copy"><p className="eyebrow">THE PERSON BEHIND PRECIOUSWRKS</p><h1 id="about-page-heading">Words have weight.<br/><em>So does the person</em><br/>behind them.</h1>
+     <p className="about-editorial-lead">I’m Precious Afolabi, an independent Nordic translator and localization specialist. For more than nine years, I’ve helped teams make their message clear, accurate and natural across Norwegian, Danish and English.</p>
+     <div className="about-editorial-actions"><Link className="about-editorial-button" href="/#contact">Work with me <span aria-hidden="true">↗</span></Link><a href="#my-approach" className="about-editorial-secondary">Get to know my approach ↓</a></div>
+     <p className="about-editorial-location">LONDON, UK <span>·</span> WORKING WORLDWIDE</p>
+    </div>
+    <div className="about-editorial-photo"><Image src="/images/precious-portrait.webp" alt="Portrait of Precious Afolabi, Nordic translation and localization specialist" fill priority sizes="(max-width: 820px) 90vw, 44vw" className="about-editorial-img"/><span className="about-editorial-photo-label">PRECIOUS AFOLABI / NORDIC LANGUAGE SPECIALIST</span></div>
+   </section></div>
+   <section className="about-editorial-manifesto shell" id="my-approach"><div><p className="eyebrow">MY APPROACH</p><h2>Good language is precise.<br/><em>Great language understands.</em></h2></div><div><p className="about-editorial-statement">A translation can be technically correct and still miss the point. My job is to protect both: the meaning of the original and the experience of the person reading it.</p><p>I bring careful linguistic judgement, close attention to terminology and a practical understanding of how content moves through real projects. From technical instructions to digital interfaces, I work to make every decision deliberate, explainable and fit for purpose.</p></div></section>
+   <section className="about-editorial-proof"><div className="shell about-editorial-proof-inner"><div><strong>9+</strong><span>YEARS OF PROFESSIONAL EXPERIENCE</span></div><div><strong>3</strong><span>WORKING LANGUAGES</span></div><div><strong>1</strong><span>DIRECT POINT OF CONTACT</span></div></div></section>
+   <section className="about-editorial-values shell"><div className="about-editorial-section-heading"><p className="eyebrow">WHAT YOU CAN EXPECT</p><h2>Care is not an extra.<br/><em>It’s the standard.</em></h2></div><div className="about-editorial-values-grid">{strengths.map(item=><article key={item.number}><span>{item.number}</span><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div></section>
+   <section className="about-editorial-language"><div className="shell about-editorial-language-inner"><div><p className="eyebrow">THREE LANGUAGES. BOTH DIRECTIONS.</p><h2>Fluent in language.<br/><em>Attentive to nuance.</em></h2><p>Native Norwegian, near-native Danish and fluent English inform the way I work with tone, register and meaning. Closely related languages are never treated as interchangeable.</p></div><div className="about-editorial-pairs">{languages.map(label=><div key={label}><span>{label}</span><span aria-hidden="true">↗</span></div>)}<p>Choose the direction that fits your project. I’ll confirm the audience, variety and delivery requirements before we begin.</p></div></div></section>
+   <section className="about-editorial-method shell"><div><p className="eyebrow">WORKING WITH ME</p><h2>Your standards.<br/><em>My full attention.</em></h2><p>Whether you manage recurring localization releases or need help with a single specialist document, you work with me directly.</p></div><div className="about-editorial-method-details"><article><h3>Technical and specialist content</h3><p>Experience with engineering documentation, medical device content, software, gaming and other detail-sensitive assignments. I use your approved references and raise questions when the source calls for clarification.</p></article><article><h3>Built for your workflow</h3><p>I work with Trados Studio, memoQ, Phrase, XTM Cloud, Smartcat and Xbench. Terminology, tags, formatting and delivery specifications are part of the brief, not afterthoughts.</p></article><article><h3>Clear from start to handover</h3><p>We agree on the scope, rate and deadline before work begins. I communicate directly, check the details that matter and deliver in your requested format.</p></article></div></section>
+   <section className="about-editorial-closing"><div className="shell"><p className="eyebrow">LET'S MAKE IT COUNT</p><h2>For the words that<br/><em>need to be right.</em></h2><p>If you need a specialist who cares about the details as much as the outcome, I’d be glad to hear what you’re working on.</p><Link className="about-editorial-button" href="/#contact">Start a conversation <span aria-hidden="true">↗</span></Link></div></section>
+  </main><LuxuryFooter /></>;
+}
