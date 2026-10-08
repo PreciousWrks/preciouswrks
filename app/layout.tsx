@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.preciouswrks.com"),
-  title: "Precious Afolabi | Nordic Localization Specialist",
+  title: "Precious Afolabi | Freelance Norwegian & Danish Translator",
   description:
-    "Independent Norwegian, Danish and English translation, localization and linguistic QA. Nine years of experience across technical, medical and digital content.",
+    "Freelance Norwegian and Danish translation, MTPE and linguistic QA by Precious Afolabi. 9+ years of experience in technical, medical and software localization.",
   alternates: {
     canonical: "/",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "Precious Afolabi | Nordic Localization Specialist",
+    title: "Precious Afolabi | Freelance Norwegian & Danish Translator",
     description:
       "Norwegian and Danish translation, localization and linguistic QA for technical, medical and digital content. Work directly with Precious Afolabi.",
     url: "https://www.preciouswrks.com/",
