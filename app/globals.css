@@ -99,3 +99,40 @@ img{max-width:100%}
 @media(max-width:900px){.hero-aside:has(.personal-portrait){margin-inline:auto;width:min(100%,560px)}.personal-portrait{max-height:530px;object-position:center top}}
 @media(max-width:600px){.hero{overflow:hidden}.hero-intro{font-size:18px;line-height:1.6}.hero-links .primary-link{min-height:48px;display:inline-flex;align-items:center}.analytics-consent{bottom:8px;left:8px;right:8px;padding:15px}.section,.work-section{padding-block:65px}.site-header nav a{min-height:48px}}
 @media(prefers-reduced-motion:reduce){.hero-copy{animation:none!important}}
+
+
+/* PreciousWrks premium ivory header, inspired by fluid silk folds */
+.opening,.opening-header{background-color:#faf8f2!important;color:#080808!important;background-image:radial-gradient(ellipse at 76% 10%,rgba(210,178,124,.24),transparent 46%),radial-gradient(ellipse at 100% 75%,rgba(218,195,152,.17),transparent 36%),repeating-conic-gradient(from 18deg at 92% 5%,transparent 0deg 13deg,rgba(190,157,109,.045) 15deg,transparent 20deg 42deg)!important}
+.opening .site-header{border-bottom-color:#d9d2c5}.opening .site-header nav a{color:#080808}.opening .brand{color:#080808}.opening .hero h1 em{color:#926a21}.opening .hero .eyebrow{color:#976c1c}.opening .hero-intro{color:#42413c}.opening .hero .primary-link,.opening .header-contact{background:#dda32d;color:#080808;border:1px solid #dda32d;border-radius:100px;padding:13px 24px;font-weight:700}.opening .hero .primary-link:hover,.opening .header-contact:hover{background:#f0bd59;color:#080808}.opening .hero .text-link{color:#080808}.opening .proof-strip{border-color:#c9c1b1;color:#4f4a42}
+.site-header .header-contact{border-radius:100px;background:#dda32d;color:#080808;border:1px solid #dda32d;font-weight:700;padding:11px 20px}
+.site-header .header-contact:hover{background:#f0bd59;color:#080808}
+.work-visual{display:block;width:100%;height:auto;aspect-ratio:920/520;object-fit:cover;margin-bottom:25px;border-radius:5px}
+.work-item{padding-top:40px}
+.luxury-footer{position:relative;isolation:isolate;background:#090a09;color:#f6f2e9;overflow:hidden;min-height:490px}
+.luxury-footer:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 98% 92%,rgba(180,124,37,.24),transparent 40%),linear-gradient(140deg,transparent 55%,rgba(151,104,38,.13) 64%,transparent 74%),#090a09}
+.luxury-footer-glow{position:absolute;inset:auto -10% -120px 40%;height:300px;transform:rotate(-15deg);z-index:-1;background:radial-gradient(ellipse,rgba(172,118,40,.17),transparent 65%);pointer-events:none}
+.luxury-footer-portrait{position:absolute;z-index:-1;left:-65px;bottom:0;width:min(40%,470px);height:100%;background-image:linear-gradient(90deg,rgba(9,10,9,.03) 20%,#090a09 100%),linear-gradient(0deg,#090a09 0%,transparent 29%),url('/images/precious-portrait.webp');background-size:cover;background-position:center top;filter:grayscale(1);opacity:.48;mask-image:linear-gradient(90deg,#000 35%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 35%,transparent 100%);pointer-events:none}
+.luxury-footer-main{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(145px,.65fr) minmax(230px,.9fr);gap:7%;padding-top:105px;padding-bottom:90px;position:relative}
+.luxury-footer-intro{padding-left:min(17vw,170px)}
+.luxury-footer-kicker{display:block;font-size:11px;letter-spacing:.21em;font-weight:700;color:#e3ba6b;margin:0 0 22px}
+.luxury-footer h2{font-size:clamp(38px,4.5vw,64px);font-weight:400;line-height:1.08;letter-spacing:-.055em;margin:0 0 22px}
+.luxury-footer h2 em{font-family:NordicSerif,Georgia,serif;color:#edc471}
+.luxury-footer-intro>p:not(.luxury-footer-kicker){font-size:15px;color:#bdbbb5;max-width:340px;margin:0 0 27px}
+.luxury-footer-cta{display:inline-flex;gap:25px;align-items:center;background:#dfa631;color:#080808;border-radius:100px;padding:13px 24px;font-weight:700;font-size:14px;transition:background .2s}
+.luxury-footer-cta:hover{background:#f1be59}
+.luxury-footer-nav,.luxury-footer-connect{border-left:1px solid #4a4338;padding-left:28px}
+.luxury-footer-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.luxury-footer-nav .luxury-footer-kicker{margin-bottom:12px}
+.luxury-footer-nav a{font-size:15px;color:#e4e1db}.luxury-footer-nav a:hover,.luxury-footer-email:hover,.luxury-footer-bottom a:hover{color:#ffc45b}
+.luxury-footer-connect p{font-size:15px;color:#cfcbc2;line-height:1.7;max-width:270px;margin:0 0 20px}
+.luxury-footer-social{display:flex;gap:12px;margin:0 0 22px}
+.luxury-footer-social a{border:1px solid #b58a41;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;color:#e4b454;transition:background .2s,color .2s}
+.luxury-footer-social a:hover{background:#dda32d;color:#090a09}
+.luxury-footer-social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.footer-in{font-weight:700;font-family:Arial,sans-serif;font-size:17px}
+.luxury-footer-email{font-size:14px;color:#e3e0d8;overflow-wrap:anywhere}
+.luxury-footer-bottom{position:relative;border-top:1px solid #3a342d;padding-block:22px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:12px;color:#a9a399}
+.luxury-footer-brand{display:flex;align-items:center;gap:6px;color:#fff;font-family:Georgia,serif;font-size:23px}.luxury-footer-brand span{color:#dda32d;font-size:12px}.luxury-footer-brand small{font:700 10px NordicSans,Arial,sans-serif;letter-spacing:.22em;margin-left:10px}
+.luxury-footer-bottom>div{display:flex;gap:22px}
+@media(max-width:950px){.luxury-footer-main{grid-template-columns:1.3fr .7fr;gap:45px}.luxury-footer-intro{padding-left:60px}.luxury-footer-connect{grid-column:2}.luxury-footer-portrait{width:42%}}
+@media(max-width:680px){.luxury-footer-main{grid-template-columns:1fr;gap:40px;padding-block:95px 65px}.luxury-footer-intro{padding-left:0;padding-top:190px}.luxury-footer-portrait{width:82%;max-width:410px;height:330px;top:0;bottom:auto;left:-45px;opacity:.4;mask-image:linear-gradient(to bottom,#000 25%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 25%,transparent 100%)}.luxury-footer-nav,.luxury-footer-connect{grid-column:auto;border-left:0;border-top:1px solid #3c352b;padding-left:0;padding-top:22px}.luxury-footer-bottom{flex-wrap:wrap}.luxury-footer-bottom>span{order:3;width:100%}.opening .hero .primary-link{min-height:48px}.site-header .header-contact{padding:10px 16px}}
