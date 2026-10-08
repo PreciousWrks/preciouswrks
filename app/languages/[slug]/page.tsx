@@ -5,24 +5,24 @@ import { notFound } from "next/navigation";
 
 const pairs = {
   "english-to-norwegian": {
-    title: "English to Norwegian Translation",
-    description: "Professional English to Norwegian translation for technical manuals, medical device documents, software and business content. Work directly with Precious Afolabi.",
+    title: "English ↔ Norwegian Translation",
+    description: "Professional English to Norwegian and Norwegian to English translation for technical manuals, medical device documents, software and business content. Work directly with Precious Afolabi.",
     from: "English", to: "Norwegian",
     intro: "Norwegian translation that respects the subject, the reader and the details.",
     uses: ["Engineering manuals, equipment operating instructions and safety documentation", "Medical device instructions for use and controlled terminology", "Software interfaces, product experiences and gaming content"],
     quality: ["Norwegian terminology, natural phrasing and appropriate register", "Units, numbers, product identifiers and source meaning", "Consistent CAT tool output, placeholders and final file formatting"]
   },
   "english-to-danish": {
-    title: "English to Danish Translation",
-    description: "Specialist English to Danish translation, revision and localization for medical, technical and digital content. Contact Precious Afolabi for a project quote.",
+    title: "English ↔ Danish Translation",
+    description: "Specialist English to Danish and Danish to English translation, revision and localization for medical, technical and digital content. Contact Precious Afolabi for a project quote.",
     from: "English", to: "Danish",
     intro: "Danish language support for documentation and products where precision matters.",
     uses: ["Medical device documentation and instructions for use", "Technical, legal and business documentation", "Software interfaces, ecommerce and marketing content"],
     quality: ["Reference versions, style guides and approved Danish terminology", "Clarity, naturalness and regulatory document consistency", "Identifiers, tags, numbers and layouts"]
   },
   "norwegian-to-danish": {
-    title: "Norwegian to Danish Translation",
-    description: "Norwegian to Danish translation and localization for companies working across Nordic markets. Specialist linguistic review and direct collaboration.",
+    title: "Norwegian ↔ Danish Translation",
+    description: "Norwegian to Danish and Danish to Norwegian translation and localization for companies working across Nordic markets. Specialist linguistic review and direct collaboration.",
     from: "Norwegian", to: "Danish",
     intro: "Cross Nordic communication without treating closely related languages as interchangeable.",
     uses: ["Corporate communication and regional websites", "Technical and product documentation", "Software, marketing and customer facing material"],
