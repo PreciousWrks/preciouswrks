@@ -8,25 +8,25 @@ const pairs = {
     title: "English ↔ Norwegian Translation",
     description: "Professional English to Norwegian and Norwegian to English translation for technical manuals, medical device documents, software and business content. Work directly with Precious Afolabi.",
     from: "English", to: "Norwegian",
-    intro: "Norwegian translation that respects the subject, the reader and the details.",
+    intro: "Norwegian and English, translated with the precision your message deserves.",
     uses: ["Engineering manuals, equipment operating instructions and safety documentation", "Medical device instructions for use and controlled terminology", "Software interfaces, product experiences and gaming content"],
-    quality: ["Norwegian terminology, natural phrasing and appropriate register", "Units, numbers, product identifiers and source meaning", "Consistent CAT tool output, placeholders and final file formatting"]
+    quality: ["Terminology and natural expression in either translation direction", "Units, numbers, product identifiers and source meaning", "Consistent CAT tool output, placeholders and final file formatting"]
   },
   "english-to-danish": {
     title: "English ↔ Danish Translation",
     description: "Specialist English to Danish and Danish to English translation, revision and localization for medical, technical and digital content. Contact Precious Afolabi for a project quote.",
     from: "English", to: "Danish",
-    intro: "Danish language support for documentation and products where precision matters.",
+    intro: "From Danish to English and back, make every word work for its audience.",
     uses: ["Medical device documentation and instructions for use", "Technical, legal and business documentation", "Software interfaces, ecommerce and marketing content"],
-    quality: ["Reference versions, style guides and approved Danish terminology", "Clarity, naturalness and regulatory document consistency", "Identifiers, tags, numbers and layouts"]
+    quality: ["Approved terminology and style in Danish and English", "Clarity, naturalness and regulatory document consistency", "Identifiers, tags, numbers and layouts"]
   },
   "norwegian-to-danish": {
     title: "Norwegian ↔ Danish Translation",
     description: "Norwegian to Danish and Danish to Norwegian translation and localization for companies working across Nordic markets. Specialist linguistic review and direct collaboration.",
     from: "Norwegian", to: "Danish",
-    intro: "Cross Nordic communication without treating closely related languages as interchangeable.",
+    intro: "Close in language. Different in nuance. Get both exactly right.",
     uses: ["Corporate communication and regional websites", "Technical and product documentation", "Software, marketing and customer facing material"],
-    quality: ["Meaning and nuance between Norwegian and Danish", "Target audience terminology and tone", "Formatting, figures, consistency and final delivery checks"]
+    quality: ["Meaning and nuance in both Nordic translation directions", "Target audience terminology and tone", "Formatting, figures, consistency and final delivery checks"]
   }
 } as const;
 
@@ -78,9 +78,9 @@ export default async function LanguagePairPage({params}: {params:Promise<{slug:s
       <div className="service-body">
         <section><h2>What I translate</h2><ul>{item.uses.map(value=><li key={value}>{value}</li>)}</ul></section>
         <section><h2>What I check</h2><ul>{item.quality.map(value=><li key={value}>{value}</li>)}</ul></section>
-        <section className="service-delivery"><p className="eyebrow">DIRECT COLLABORATION</p><h2>From brief to delivery</h2>
-          <p>Share your source files, audience, word count, terminology resources and deadline. I’ll review the scope, confirm availability, and agree on the rate and deliverables before starting.</p>
-          <p>Translation, revision, machine translation post editing and linguistic QA are available according to your project requirements.</p>
+        <section className="service-delivery"><p className="eyebrow">DIRECT COLLABORATION</p><h2>Clarity from first brief to final file</h2>
+          <p>Tell me who the text is for, where it will be used and what matters most. I’ll review the files, references and deadline before confirming scope, availability and a clear quote.</p>
+          <p>Whether you need translation, revision, MTPE or linguistic QA, you work directly with a specialist who follows your requirements and flags important questions early.</p>
           <Link className="primary-link" href="/#contact">Request a project quote</Link>
         </section>
       </div>
