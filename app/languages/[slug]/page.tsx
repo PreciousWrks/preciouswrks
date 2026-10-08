@@ -1,3 +1,4 @@
+import LuxuryFooter from "@/app/luxury-footer";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -88,6 +89,6 @@ export default async function LanguagePairPage({params}: {params:Promise<{slug:s
         <div>{Object.entries(pairs).filter(([key])=>key!==slug).map(([key,value])=><Link key={key} href={`/languages/${key}`}>{value.title}</Link>)}</div>
       </nav>
     </main>
-    <footer className="footer shell"><p><strong>Precious Afolabi.</strong><span>Nordic localization specialist</span></p><Link href="/#contact">Get in touch</Link></footer>
+    <LuxuryFooter />
   </>;
 }
