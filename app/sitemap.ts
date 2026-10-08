@@ -1,3 +1,13 @@
-import type { MetadataRoute } from 'next';
-import { serviceCatalog } from '@/lib/services';
-export default function sitemap():MetadataRoute.Sitemap{return [{url:'https://www.preciouswrks.com/',changeFrequency:'monthly',priority:1},...serviceCatalog.map(s=>({url:`https://www.preciouswrks.com/services/${s.slug}`,changeFrequency:'monthly' as const,priority:0.8}))];}
+import type { MetadataRoute } from "next";
+import { serviceCatalog } from "@/lib/services";
+
+const origin = "https://www.preciouswrks.com";
+const languagePairs = ["english-to-norwegian", "english-to-danish", "norwegian-to-danish"];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {url:origin+"/",changeFrequency:"monthly",priority:1},
+    ...languagePairs.map(slug=>({url:`${origin}/languages/${slug}`,changeFrequency:"monthly" as const,priority:0.9})),
+    ...serviceCatalog.map(s=>({url:`${origin}/services/${s.slug}`,changeFrequency:"monthly" as const,priority:0.8}))
+  ];
+}
