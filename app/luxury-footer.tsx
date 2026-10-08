@@ -15,8 +15,8 @@ export default function LuxuryFooter() {
     <div className="shell luxury-footer-main">
       <div className="luxury-footer-intro">
         <p className="luxury-footer-kicker">LET'S WORK TOGETHER</p>
-        <h2>Let’s make your next<br/><em>message matter.</em></h2>
-        <p>Nordic language expertise. Thoughtful communication. Direct collaboration.</p>
+        <h2>The right words<br/><em>change everything.</em></h2>
+        <p>For the message that needs to land exactly right, work directly with a Nordic language specialist.</p>
         <Link className="luxury-footer-cta" href="/#contact">Request a quote <span aria-hidden="true">↗</span></Link>
       </div>
       <nav className="luxury-footer-nav" aria-label="Footer navigation">
@@ -25,7 +25,7 @@ export default function LuxuryFooter() {
       </nav>
       <div className="luxury-footer-connect">
         <span className="luxury-footer-kicker">GET IN TOUCH</span>
-        <p>Have a project in mind? Send a brief and I’ll respond personally.</p>
+        <p>Have a brief, a question or a deadline? Tell me what you need. I’ll take it from there.</p>
         <div className="luxury-footer-social">
           <a href={`mailto:${contactEmail}`} aria-label="Email Precious Afolabi" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
           <a href="https://www.linkedin.com/in/precious-afolabi-989084284/" target="_blank" rel="noopener noreferrer" aria-label="Precious Afolabi on LinkedIn" title="LinkedIn"><span className="footer-in">in</span></a>
