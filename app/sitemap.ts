@@ -7,6 +7,7 @@ const languagePairs = ["english-to-norwegian", "english-to-danish", "norwegian-t
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {url:origin+"/",changeFrequency:"monthly",priority:1},
+    {url:origin+"/privacy",changeFrequency:"yearly",priority:0.2},
     ...languagePairs.map(slug=>({url:`${origin}/languages/${slug}`,changeFrequency:"monthly" as const,priority:0.9})),
     ...serviceCatalog.map(s=>({url:`${origin}/services/${s.slug}`,changeFrequency:"monthly" as const,priority:0.8}))
   ];
