@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import LuxuryFooter from "@/app/luxury-footer";
 export const metadata: Metadata = {
   title: "About Precious Afolabi | Nordic Translator & Localization Specialist",
   description: "Meet Precious Afolabi, a London-based Norwegian and Danish localization specialist with 9+ years of experience. Translation, revision, MTPE and linguistic QA across English, Norwegian and Danish.",
   alternates: { canonical: "/about" },
-  openGraph: { title: "About Precious Afolabi | Nordic Localization", description: "A closer look at the language expertise, judgement and working approach behind PreciousWrks.", url: "https://www.preciouswrks.com/about", type: "profile" },
+  openGraph: { title: "About Precious Afolabi | Nordic Localization", description: "A closer look at the language expertise, judgement and working approach behind PreciousWrks.", url: "https://www.preciouswrks.com/about", type: "website" },
 };
 const strengths = [
   {number:"01",title:"Meaning before mechanics",detail:"The task is never simply to replace words. I look at who will read the text, what they need to do with it and what cannot afford to be misunderstood."},
@@ -23,7 +22,7 @@ export default function AboutPage(){
      <div className="about-editorial-actions"><Link className="about-editorial-button" href="/#contact">Work with me <span aria-hidden="true">↗</span></Link><a href="#my-approach" className="about-editorial-secondary">Get to know my approach ↓</a></div>
      <p className="about-editorial-location">LONDON, UK <span>·</span> WORKING WORLDWIDE</p>
     </div>
-    <div className="about-editorial-photo"><Image src="/images/precious-portrait.webp" alt="Portrait of Precious Afolabi, Nordic translation and localization specialist" fill priority sizes="(max-width: 820px) 90vw, 44vw" className="about-editorial-img"/><span className="about-editorial-photo-label">PRECIOUS AFOLABI / NORDIC LANGUAGE SPECIALIST</span></div>
+    <div className="about-editorial-photo"><img src="/images/precious-portrait.webp" alt="Portrait of Precious Afolabi, Nordic translation and localization specialist" width="900" height="900" decoding="async" fetchPriority="high" className="about-editorial-img"/><span className="about-editorial-photo-label">PRECIOUS AFOLABI / NORDIC LANGUAGE SPECIALIST</span></div>
    </section></div>
    <section className="about-editorial-manifesto shell" id="my-approach"><div><p className="eyebrow">MY APPROACH</p><h2>Good language is precise.<br/><em>Great language understands.</em></h2></div><div><p className="about-editorial-statement">A translation can be technically correct and still miss the point. My job is to protect both: the meaning of the original and the experience of the person reading it.</p><p>I bring careful linguistic judgement, close attention to terminology and a practical understanding of how content moves through real projects. From technical instructions to digital interfaces, I work to make every decision deliberate, explainable and fit for purpose.</p></div></section>
    <section className="about-editorial-proof"><div className="shell about-editorial-proof-inner"><div><strong>9+</strong><span>YEARS OF PROFESSIONAL EXPERIENCE</span></div><div><strong>3</strong><span>WORKING LANGUAGES</span></div><div><strong>1</strong><span>DIRECT POINT OF CONTACT</span></div></div></section>
