@@ -1,5 +1,5 @@
-import LuxuryFooter from "@/app/luxury-footer";
 "use client";
+import LuxuryFooter from "@/app/luxury-footer";
 
 import { useState, useEffect, useRef, type FormEvent } from "react";
 
