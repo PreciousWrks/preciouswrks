@@ -16,8 +16,7 @@ const strengths = [
 const languages = ["English ↔ Norwegian","English ↔ Danish","Norwegian ↔ Danish"];
 export default function AboutPage(){
  return <><a className="skip-link" href="#main">Skip to content</a>
-  <div className="about-editorial-top"><header className="site-header shell about-editorial-header"><Link className="brand" href="/">Precious Afolabi<span>.</span></Link><nav aria-label="Page navigation"><Link href="/">Home</Link><Link href="/#expertise">Services</Link><Link href="/#work">Selected work</Link><Link className="header-contact" href="/#contact">Discuss a project ↗</Link></nav></header>
-  <main id="main">
+  <main id="main"><div className="about-editorial-top"><header className="site-header shell about-editorial-header"><Link className="brand" href="/">Precious Afolabi<span>.</span></Link><nav aria-label="Page navigation"><Link href="/">Home</Link><Link href="/#expertise">Services</Link><Link href="/#work">Selected work</Link><Link className="header-contact" href="/#contact">Discuss a project ↗</Link></nav></header>
    <section className="about-editorial-hero shell" aria-labelledby="about-page-heading">
     <div className="about-editorial-copy"><p className="eyebrow">THE PERSON BEHIND PRECIOUSWRKS</p><h1 id="about-page-heading">Words have weight.<br/><em>So does the person</em><br/>behind them.</h1>
      <p className="about-editorial-lead">I’m Precious Afolabi, an independent Nordic translator and localization specialist. For more than nine years, I’ve helped teams make their message clear, accurate and natural across Norwegian, Danish and English.</p>
