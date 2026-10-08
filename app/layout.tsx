@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   twitter: { card: "summary", title: "Norwegian Translator & Danish Localization | Precious Afolabi", description: "Freelance Nordic translation, localization and linguistic QA. Work directly with Precious Afolabi." },
   icons: {
-    icon: [{ url: "/portrait-favicon.ico", sizes: "any" }, { url: "/portrait-icon.png", type: "image/png", sizes: "256x256" }],
-    shortcut: "/portrait-favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/brand-mark.svg", type: "image/svg+xml", sizes: "any" }, { url: "/brand-icon.png", type: "image/png", sizes: "192x192" }, { url: "/brand-favicon.ico", sizes: "16x16 32x32 48x48 64x64" }],
+    shortcut: "/brand-favicon.ico",
+    apple: "/brand-apple.png",
   },
   openGraph: {
     title: "Norwegian Translator & Danish Localization | Precious Afolabi",
