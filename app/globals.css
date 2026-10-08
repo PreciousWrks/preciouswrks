@@ -28,3 +28,6 @@ h1,h2,h3,p{overflow-wrap:normal}h1,h2{font-weight:400;letter-spacing:-.065em;lin
 @media(max-width:600px){.logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.logo-grid a,.logo-grid a:nth-child(n){min-height:120px;padding:16px}.logo-grid img{max-width:100%;max-height:76px}.logo-grid img[src$="taya.webp"],.logo-grid img[src$="words-in-translation.png"]{max-height:80px}.logo-grid img[src$="future-trans.png"]{max-width:100%}}
 
 .logo-grid a.partner-future,.logo-grid a.partner-future:hover{background:#080808;border-color:#080808}
+
+.case-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 24px}.work-item .case-meta span{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}.case-meta span+span{color:var(--muted)}.case-details{margin:0;display:grid;gap:20px}.case-details>div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px}.case-details dt{font-size:14px;font-weight:700;color:var(--ink)}.case-details dd{margin:0;font-size:16px;line-height:1.65;color:var(--muted)}.work-item{padding-block:32px 42px}
+@media(max-width:600px){.case-details>div{grid-template-columns:1fr;gap:5px}.case-meta{margin-block:14px 22px}.work-item h3{font-size:28px}}
