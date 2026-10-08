@@ -136,3 +136,53 @@ img{max-width:100%}
 .luxury-footer-bottom>div{display:flex;gap:22px}
 @media(max-width:950px){.luxury-footer-main{grid-template-columns:1.3fr .7fr;gap:45px}.luxury-footer-intro{padding-left:60px}.luxury-footer-connect{grid-column:2}.luxury-footer-portrait{width:42%}}
 @media(max-width:680px){.luxury-footer-main{grid-template-columns:1fr;gap:40px;padding-block:95px 65px}.luxury-footer-intro{padding-left:0;padding-top:190px}.luxury-footer-portrait{width:82%;max-width:410px;height:330px;top:0;bottom:auto;left:-45px;opacity:.4;mask-image:linear-gradient(to bottom,#000 25%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 25%,transparent 100%)}.luxury-footer-nav,.luxury-footer-connect{grid-column:auto;border-left:0;border-top:1px solid #3c352b;padding-left:0;padding-top:22px}.luxury-footer-bottom{flex-wrap:wrap}.luxury-footer-bottom>span{order:3;width:100%}.opening .hero .primary-link{min-height:48px}.site-header .header-contact{padding:10px 16px}}
+
+
+/* PreciousWrks signature ivory hero */
+.opening{position:relative;isolation:isolate;background:#faf8f2!important;color:#080808!important;overflow:hidden}
+.opening:before{content:"";position:absolute;inset:-20% -8% -5% 25%;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 76% 27%,#eee2ccaa,transparent 57%),radial-gradient(ellipse at 54% 85%,#dfd1b566,transparent 54%),repeating-radial-gradient(ellipse at 100% 0%,transparent 0 54px,#cba96b21 55px 57px,transparent 58px 118px);opacity:.87;transform:rotate(-10deg)}
+.opening .site-header{border-color:#dcd8cd!important}
+.opening .site-header nav a,.opening .brand{color:#080808!important}
+.opening .header-contact{border-radius:100px;background:#db9e2c!important;color:#080808!important;border-color:#d49a32!important;padding:11px 23px;font-weight:700}
+.opening .header-contact:hover{background:#f0b940!important}
+.opening .hero .eyebrow{color:#8a641c!important}
+.opening .hero h1,.opening .hero h1 em{color:#080808!important}
+.opening .hero-intro{color:#4c4b47!important}
+.opening .hero .primary-link{background:#dfa532;border-color:#dfa532;color:#080808;border-radius:100px}
+.opening .hero .text-link{color:#080808}
+.opening .hero-email{color:#333!important}
+.opening .proof-strip{border-color:#d9d3c4;color:#5f5b54}
+.opening .personal-portrait{filter:contrast(1.04);mix-blend-mode:multiply}
+/* Shared editorial footer. Existing portrait asset, never a generated substitute. */
+.luxury-footer{position:relative;isolation:isolate;overflow:hidden;background:#090a09;color:#f8f6ef;padding:90px 0 0}
+.luxury-footer-glow{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 10% 100%,#99723144,transparent 40%),radial-gradient(ellipse at 95% 72%,#8b66202c,transparent 48%),repeating-linear-gradient(149deg,transparent 0 185px,#cfa95d09 190px,transparent 200px);pointer-events:none}
+.luxury-footer-portrait{position:absolute;z-index:-1;bottom:0;left:-5%;width:min(41%,570px);height:100%;background:linear-gradient(90deg,#090a0900 42%,#090a09 100%),linear-gradient(0deg,#090a09 0%,transparent 40%),url('/images/precious-portrait.webp') center 32%/cover no-repeat;filter:grayscale(1) contrast(1.12) brightness(.58);opacity:.53;mask-image:linear-gradient(to right,#000 0%,#000 48%,transparent 100%);pointer-events:none}
+.luxury-footer-main{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(160px,.55fr) minmax(210px,.7fr);gap:clamp(26px,5vw,90px);padding-bottom:100px;position:relative}
+.luxury-footer-intro{padding-left:clamp(0px,9vw,120px)}
+.luxury-footer-kicker{display:block;font-size:11px;letter-spacing:.23em;font-weight:700;color:#cbbd9e;margin-bottom:26px}
+.luxury-footer h2{font-size:clamp(38px,4.8vw,68px);font-weight:400;letter-spacing:-.055em;line-height:1.1;margin:0 0 20px}
+.luxury-footer h2 em{color:#e9b655}
+.luxury-footer-intro>p:not(.luxury-footer-kicker),.luxury-footer-connect p{color:#d5d0c3;font-size:15px;line-height:1.75;max-width:360px}
+.luxury-footer-cta{display:inline-flex;gap:30px;align-items:center;background:#e4ac44;color:#080808;font-weight:700;font-size:14px;border-radius:100px;padding:13px 22px;margin-top:18px;transition:background .2s}
+.luxury-footer-cta:hover{background:#ffcc62}
+.luxury-footer-nav{border-left:1px solid #ffffff2b;padding-left:clamp(16px,3vw,42px);display:flex;flex-direction:column;gap:13px}
+.luxury-footer-nav .luxury-footer-kicker{margin-bottom:9px}
+.luxury-footer-nav a{font-size:15px;color:#e6e2d8;width:fit-content}
+.luxury-footer-nav a:hover,.luxury-footer-email:hover{text-decoration:underline;text-underline-offset:6px;color:#ffcf74}
+.luxury-footer-connect{border-left:1px solid #ffffff2b;padding-left:clamp(16px,3vw,42px)}
+.luxury-footer-connect .luxury-footer-kicker{margin-bottom:12px}
+.luxury-footer-social{display:flex;gap:12px;margin:25px 0}
+.luxury-footer-social a{width:49px;height:49px;display:flex;align-items:center;justify-content:center;border:1px solid #b88731;color:#e8b756;border-radius:50%;transition:background .2s}
+.luxury-footer-social a:hover{background:#3b2b14}
+.luxury-footer-social svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.footer-in{font-weight:700;font-size:20px;line-height:1}
+.luxury-footer-email{font-size:14px;overflow-wrap:anywhere;color:#eee9dc;text-decoration:underline;text-underline-offset:4px}
+.luxury-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #ffffff30;padding-block:23px;color:#bfb8aa;font-size:12px}
+.luxury-footer-brand{color:#fff;font-family:Georgia,serif;font-size:27px;display:flex;align-items:center;gap:12px}
+.luxury-footer-brand span{font-size:10px;color:#f8bd49;margin-left:-14px;align-self:flex-start}
+.luxury-footer-brand small{font:700 11px NordicSans,Arial,sans-serif;letter-spacing:.2em;margin-left:9px}
+.luxury-footer-bottom>div{display:flex;gap:22px}
+.work-visual{display:block;width:100%;height:auto;aspect-ratio:920/520;object-fit:cover;margin:0 0 24px}
+@media(max-width:900px){.luxury-footer-main{grid-template-columns:1fr 1fr;gap:50px}.luxury-footer-intro{grid-column:1/-1;padding-left:0}.luxury-footer-portrait{width:65%;opacity:.27}.luxury-footer-nav{padding-left:25px}.luxury-footer-connect{padding-left:25px}}
+@media(max-width:600px){.opening .site-header nav{background:#faf8f2!important}.luxury-footer{padding-top:70px}.luxury-footer-main{grid-template-columns:1fr;gap:38px;padding-bottom:60px}.luxury-footer-intro{grid-column:auto}.luxury-footer-nav,.luxury-footer-connect{border-left:0;border-top:1px solid #ffffff2b;padding:25px 0 0}.luxury-footer-portrait{left:-20%;width:110%;opacity:.18}.luxury-footer-bottom{flex-wrap:wrap;justify-content:flex-start}.luxury-footer-bottom>div{width:100%}}
+@media(prefers-reduced-motion:reduce){.luxury-footer-cta,.luxury-footer-social a{transition:none}}
