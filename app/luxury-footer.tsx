@@ -1,5 +1,5 @@
 import Link from "next/link";
-const contactEmail = "afolabiprecious233@gmail.com";
+const contactEmail = "freelance@preciouswrks.com";
 const links = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#expertise" },
