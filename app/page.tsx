@@ -6,7 +6,7 @@ import { useState, useEffect, useRef, type FormEvent } from "react";
 import { serviceCatalog } from "@/lib/services";
 
 const formspreeEndpoint = "https://formspree.io/f/xljgbnbd";
-const email = "afolabiprecious233@gmail.com";
+const email = "freelance@preciouswrks.com";
 const partners = [
   ["Translated", "/logos/translated.svg", "https://translated.com"],
   ["Protranslate", "/logos/protranslate.png", "https://www.protranslate.net/en/"],
