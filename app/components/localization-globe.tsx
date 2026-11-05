@@ -105,7 +105,7 @@ export default function LocalizationGlobe() {
         .orbit-globe{position:relative;width:84%;height:84%;transform-style:preserve-3d;transition:transform .12s ease-out;animation:globeFloat 7s ease-in-out infinite}
         .orbit-globe.paused{animation-play-state:paused}
         .globe-surface{position:absolute;inset:0;border-radius:50%;overflow:hidden;box-shadow:inset -30px -15px 55px #0009,0 22px 45px #171c1b30}
-        .globe-mesh{width:100%;height:100%;display:block}
+        .globe-mesh{width:100%;height:100%;display:block;transform-origin:50% 50%;animation:meshSpin 34s linear infinite}.orbit-globe.paused .globe-mesh{animation-play-state:paused}
         .globe-orbit{position:absolute;inset:-7%;border:2px solid #d19a49;border-radius:50%;transform:rotate(-24deg) scaleY(.42);pointer-events:none}
         .orbit-two{inset:-2%;border-color:#48b9aa;transform:rotate(48deg) scaleY(.54)}
         .globe-orbit i{position:absolute;width:13px;height:13px;border-radius:50%;background:#e2a34e;top:10%;left:16%;box-shadow:0 0 18px #e2a34e88}
@@ -115,9 +115,9 @@ export default function LocalizationGlobe() {
         .glyph-one{left:-8%;top:25%}.glyph-two{right:0;top:5%}.glyph-three{right:-8%;bottom:24%}
         .orbit-hint{position:absolute;bottom:2%;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.16em;color:#666}
         .orbit-motion-toggle{display:block;margin:0 auto;border:0;border-bottom:1px solid #8a5b25;background:none;padding:7px 0;color:#292d29;font-size:13px;cursor:pointer}
-        @keyframes globeFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
+        @keyframes meshSpin{to{transform:rotate(360deg)}}\n        @keyframes globeFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
         @media(max-width:800px){.localization-orbit{grid-template-columns:1fr;gap:28px;margin:55px 0 70px;padding:38px 7%}.orbit-copy h2{font-size:clamp(40px,9vw,58px)}.orbit-globe-stage{max-width:470px;width:100%}}
-        @media(prefers-reduced-motion:reduce){.orbit-globe{animation:none;transition:none}}
+        @media(prefers-reduced-motion:reduce){.orbit-globe{animation:none;transition:none}.globe-mesh{animation:none}}
       `}</style>
     </section>
   );
