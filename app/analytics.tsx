@@ -1,20 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import Script from "next/script";
 
 const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 type Gtag = (...args: unknown[]) => void;
 declare global { interface Window { gtag?: Gtag; dataLayer?: unknown[] } }
 
+type Consent = "accepted" | "declined" | null;
+const CONSENT_KEY = "preciouswrks_analytics_consent";
+const CONSENT_EVENT = "preciouswrks:consent-change";
+// Fallback when browser storage is disabled, so the visitor's choice still applies for this visit.
+let memoryChoice: Consent = null;
+
+function readConsent(): Consent {
+  try {
+    const choice = localStorage.getItem(CONSENT_KEY);
+    return choice === "accepted" || choice === "declined" ? choice : memoryChoice;
+  } catch { return memoryChoice; }
+}
+
+function subscribe(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(CONSENT_EVENT, onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(CONSENT_EVENT, onChange);
+  };
+}
+
 export default function Analytics() {
-  const [consent, setConsent] = useState<"accepted" | "declined" | null>(null);
-  useEffect(() => {
-    try {
-      const choice = localStorage.getItem("preciouswrks_analytics_consent");
-      if (choice === "accepted" || choice === "declined") setConsent(choice);
-    } catch { /* Storage may be disabled. */ }
-  }, []);
+  const consent = useSyncExternalStore(subscribe, readConsent, () => null);
   useEffect(() => {
     if (!measurementId || consent !== "accepted") return;
     const onEnquiry = () => window.gtag?.("event", "generate_lead", {method:"project_enquiry"});
@@ -23,8 +39,9 @@ export default function Analytics() {
   }, [consent]);
   if (!measurementId) return null;
   function choose(choice: "accepted" | "declined") {
-    try { localStorage.setItem("preciouswrks_analytics_consent", choice); } catch {}
-    setConsent(choice);
+    memoryChoice = choice;
+    try { localStorage.setItem(CONSENT_KEY, choice); } catch { /* Storage may be disabled. */ }
+    window.dispatchEvent(new Event(CONSENT_EVENT));
   }
   return <>
     {consent === "accepted" && <>

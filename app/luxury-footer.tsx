@@ -14,7 +14,7 @@ export default function LuxuryFooter() {
     <div className="luxury-footer-portrait" aria-hidden="true"/>
     <div className="shell luxury-footer-main">
       <div className="luxury-footer-intro">
-        <p className="luxury-footer-kicker">LET'S WORK TOGETHER</p>
+        <p className="luxury-footer-kicker">LET’S WORK TOGETHER</p>
         <h2>The right words<br/><em>change everything.</em></h2>
         <p>For the message that needs to land exactly right, work directly with a Nordic language specialist.</p>
         <Link className="luxury-footer-cta" href="/#contact">Request a quote <span aria-hidden="true">↗</span></Link>
