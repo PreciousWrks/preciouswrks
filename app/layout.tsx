@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Precious Afolabi", url: "https://www.preciouswrks.com/#about" }],
   robots: { index: true, follow: true },
-  twitter: { card: "summary_large_image", title: "Norwegian Translator & Danish Localization | Precious Afolabi", description: "Professional Norwegian, Danish and English translation and localization. Work directly with Precious Afolabi." },
+  twitter: { card: "summary_large_image", title: "Norwegian & Danish Translator | Precious Afolabi", description: "Professional Norwegian, Danish and English translation and localization. Work directly with Precious Afolabi." },
   icons: {
     icon: [{ url: "/brand-mark.svg", type: "image/svg+xml", sizes: "any" }, { url: "/brand-icon.png", type: "image/png", sizes: "192x192" }, { url: "/brand-favicon.ico", sizes: "16x16 32x32 48x48 64x64" }],
     shortcut: "/brand-favicon.ico",
     apple: "/brand-apple.png",
   },
   openGraph: {
-    title: "Norwegian Translator & Danish Localization | Precious Afolabi",
+    title: "Norwegian & Danish Translator | Precious Afolabi",
     description:
       "Norwegian, Danish and English translation, localization, MTPE and linguistic QA. Independent specialist, direct collaboration, careful delivery.",
     url: "https://www.preciouswrks.com/",
