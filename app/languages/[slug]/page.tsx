@@ -63,7 +63,7 @@ export default async function LanguagePairPage({params}: {params:Promise<{slug:s
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header shell service-site-header">
-      <Link className="brand" href="/" aria-label="PreciousWrks home">Precious<span>Wrks</span></Link>
+      <Link className="brand" href="/">Precious Afolabi<span>.</span></Link>
       <Link className="header-contact" href="/#contact">Request a quote</Link>
     </header>
     <main id="main" className="service-page shell">

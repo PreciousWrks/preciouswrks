@@ -9,7 +9,7 @@ export default function AboutNavigation() {
 
   return (
     <header className="site-header shell about-editorial-header">
-      <Link className="brand" href="/" aria-label="PreciousWrks home" onClick={closeMenu}>Precious<span>Wrks</span></Link>
+      <Link className="brand" href="/" onClick={closeMenu}>Precious Afolabi<span>.</span></Link>
       <button
         className="about-mobile-menu-button"
         type="button"

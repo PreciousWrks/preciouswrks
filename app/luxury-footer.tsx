@@ -37,7 +37,6 @@ export default function LuxuryFooter() {
     <div className="shell luxury-footer-bottom">
       <Link className="luxury-footer-brand" href="/">PA<span>✦</span> <small>PRECIOUSWRKS</small></Link>
       <span>© {new Date().getFullYear()} Precious Afolabi</span>
-      <p className="trading-name">PreciousWrks is the trading name of Precious Afolabi, an independent freelance localization specialist.</p>
       <div><Link href="/privacy">Privacy</Link><Link href="/">Back to home ↗</Link></div>
     </div>
   </footer>;

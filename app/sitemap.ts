@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {url:origin+"/",changeFrequency:"monthly",priority:1},
     {url:origin+"/about",changeFrequency:"monthly",priority:0.85},
     {url:origin+"/privacy",changeFrequency:"yearly",priority:0.2},
-    {url:origin+"/review",changeFrequency:"yearly",priority:0.3},
     ...languagePairs.map(slug=>({url:`${origin}/languages/${slug}`,changeFrequency:"monthly" as const,priority:0.9})),
     ...serviceCatalog.map(s=>({url:`${origin}/services/${s.slug}`,changeFrequency:"monthly" as const,priority:0.8}))
   ];
