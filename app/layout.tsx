@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./motion.css";
+import Motion from "./motion";
 import Analytics from "./analytics";
 
 export const metadata: Metadata = {
@@ -31,8 +33,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.preciouswrks.com/#website",url:"https://www.preciouswrks.com/",name:"PreciousWrks",alternateName:"Precious Afolabi",publisher:{"@id":"https://www.preciouswrks.com/#person"}},{"@type":"Person","@id":"https://www.preciouswrks.com/#person",image:"https://www.preciouswrks.com/images/precious-portrait.webp",name:"Precious Afolabi",url:"https://www.preciouswrks.com/",jobTitle:"Freelance Nordic Localization Specialist",knowsLanguage:["Norwegian","Danish","English"],sameAs:["https://www.linkedin.com/in/precious-afolabi-989084284/","https://www.proz.com/translator/4615033"],description:"Norwegian and Danish translation and localization across technical, medical and digital content."}]})}}/>{children}<Analytics /></body>
+    <html lang="en" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{__html:"(function(){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('js-motion');setTimeout(function(){if(!d.classList.contains('motion-ready'))d.classList.remove('js-motion')},3500)}}catch(e){}})()"}}/></head>
+      <body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.preciouswrks.com/#website",url:"https://www.preciouswrks.com/",name:"PreciousWrks",alternateName:"Precious Afolabi",publisher:{"@id":"https://www.preciouswrks.com/#person"}},{"@type":"Person","@id":"https://www.preciouswrks.com/#person",image:"https://www.preciouswrks.com/images/precious-portrait.webp",name:"Precious Afolabi",url:"https://www.preciouswrks.com/",jobTitle:"Freelance Nordic Localization Specialist",knowsLanguage:["Norwegian","Danish","English"],sameAs:["https://www.linkedin.com/in/precious-afolabi-989084284/","https://www.proz.com/translator/4615033"],description:"Norwegian and Danish translation and localization across technical, medical and digital content."}]})}}/>{children}<Motion /><Analytics /></body>
     </html>
   );
 }
