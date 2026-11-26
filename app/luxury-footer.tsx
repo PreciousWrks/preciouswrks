@@ -14,7 +14,7 @@ export default function LuxuryFooter() {
     <div className="luxury-footer-portrait" aria-hidden="true"/>
     <div className="shell luxury-footer-main">
       <div className="luxury-footer-intro">
-        <p className="luxury-footer-kicker">LET'S WORK TOGETHER</p>
+        <p className="luxury-footer-kicker">LET’S WORK TOGETHER</p>
         <h2>The right words<br/><em>change everything.</em></h2>
         <p>For the message that needs to land exactly right, work directly with a Nordic language specialist.</p>
         <Link className="luxury-footer-cta" href="/#contact">Request a quote <span aria-hidden="true">↗</span></Link>
@@ -37,6 +37,7 @@ export default function LuxuryFooter() {
     <div className="shell luxury-footer-bottom">
       <Link className="luxury-footer-brand" href="/">PA<span>✦</span> <small>PRECIOUSWRKS</small></Link>
       <span>© {new Date().getFullYear()} Precious Afolabi</span>
+      <p className="trading-name">PreciousWrks is the trading name of Precious Afolabi, an independent freelance localization specialist.</p>
       <div><Link href="/privacy">Privacy</Link><Link href="/">Back to home ↗</Link></div>
     </div>
   </footer>;

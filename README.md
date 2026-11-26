@@ -1,6 +1,6 @@
 # Precious Afolabi — Nordic localization
 
-Source for [Precious Afolabi’s website](https://www.preciouswrks.com/). Built with Next.js and Vinext for Cloudflare Workers. The public page is in `app/page.tsx`; the contact endpoint and owner inbox are in `app/api/contact` and `app/inbox`.
+Source for [PreciousWrks](https://www.preciouswrks.com/), the website of Precious Afolabi, an independent freelance Nordic localization specialist trading as PreciousWrks. Built with Next.js. Production runs on Vercel; the Vinext build for Cloudflare Workers is kept as an alternative host and is not deployed (see `docs/phase-1-audit.md`). The public page is in `app/page.tsx`; the contact endpoint and owner inbox are in `app/api/contact` and `app/inbox`.
 
 ## Run locally
 
