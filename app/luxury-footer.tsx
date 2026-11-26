@@ -6,6 +6,8 @@ const links = [
   { label: "Language pairs", href: "/#language-landing" },
   { label: "Case studies", href: "/#work" },
   { label: "About", href: "/about" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Reviews", href: "/review" },
   { label: "Contact", href: "/#contact" },
 ];
 export default function LuxuryFooter() {
