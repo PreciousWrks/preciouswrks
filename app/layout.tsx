@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Analytics from "./analytics";
+import MotionRoot from "./motion/motion-root";
+import "./motion/motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.preciouswrks.com"),
@@ -31,9 +33,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head><link rel="preload" href="/fonts/NordicSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/><link rel="preload" href="/fonts/NordicSerif.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/></head>
-      <body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.preciouswrks.com/#website",url:"https://www.preciouswrks.com/",name:"PreciousWrks",alternateName:"Precious Afolabi",publisher:{"@id":"https://www.preciouswrks.com/#person"}},{"@type":"Person","@id":"https://www.preciouswrks.com/#person",image:"https://www.preciouswrks.com/images/precious-portrait.webp",name:"Precious Afolabi",url:"https://www.preciouswrks.com/",jobTitle:"Freelance Nordic Localization Specialist",knowsLanguage:["Norwegian","Danish","English"],sameAs:["https://www.linkedin.com/in/precious-afolabi-989084284/","https://www.proz.com/translator/4615033"],description:"Norwegian and Danish translation and localization across technical, medical and digital content."}]})}}/>{children}<Analytics /></body>
+    <html lang="en" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{__html:"(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('fx');setTimeout(function(){d.classList.add('fx-ready')},3000)}})(document.documentElement)"}}/><link rel="preload" href="/fonts/NordicSans.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/><link rel="preload" href="/fonts/NordicSerif.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/></head>
+      <body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.preciouswrks.com/#website",url:"https://www.preciouswrks.com/",name:"PreciousWrks",alternateName:"Precious Afolabi",publisher:{"@id":"https://www.preciouswrks.com/#person"}},{"@type":"Person","@id":"https://www.preciouswrks.com/#person",image:"https://www.preciouswrks.com/images/precious-portrait.webp",name:"Precious Afolabi",url:"https://www.preciouswrks.com/",jobTitle:"Freelance Nordic Localization Specialist",knowsLanguage:["Norwegian","Danish","English"],sameAs:["https://www.linkedin.com/in/precious-afolabi-989084284/","https://www.proz.com/translator/4615033"],description:"Norwegian and Danish translation and localization across technical, medical and digital content."}]})}}/>{children}<Analytics /><MotionRoot /></body>
     </html>
   );
 }
